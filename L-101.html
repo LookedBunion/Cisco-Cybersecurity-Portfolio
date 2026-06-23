@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L-101 — OSPF multi-area design and verification</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <p class="site-title">Your Name</p>
+    <nav class="site-nav">
+      <a href="../index.html#ccnp">CCNP labs</a>
+      <a href="../index.html#cyber">Security labs</a>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <a class="lab-back" href="../index.html#ccnp">&larr; Back to CCNP labs</a>
+
+  <div class="lab-header">
+    <h1>OSPF multi-area design and verification</h1>
+    <div class="lab-meta-row">
+      <span><span class="k">Topic</span>Routing — OSPFv2</span>
+      <span><span class="k">Date</span>2026-03-01</span>
+      <span><span class="k">Tools</span>GNS3, Cisco IOSv, Wireshark</span>
+      <span><span class="status done">Completed</span></span>
+    </div>
+  </div>
+
+  <article class="lab-body">
+
+    <h2>Objective</h2>
+    <p>This is sample placeholder text. Replace with the objective from your write-up — what the lab was meant to demonstrate and why it matters.</p>
+
+    <h2>Topology</h2>
+    <p>Replace this paragraph with a short description of the topology, then add the diagram below.</p>
+    <img src="https://placehold.co/800x420?text=Topology+diagram" alt="Placeholder topology diagram — replace with your exported topology image">
+
+    <h2>Configuration</h2>
+    <p>Paste the relevant configuration here.</p>
+    <pre><code>router ospf 1
+ router-id 10.0.0.1
+ network 10.0.0.0 0.0.0.255 area 0
+ network 10.0.1.0 0.0.0.255 area 1
+!
+interface GigabitEthernet0/0
+ ip ospf network point-to-point</code></pre>
+
+    <h2>Verification</h2>
+    <p>Describe how you verified the configuration worked as intended — replace with your actual verification narrative.</p>
+    <pre><code>R1# show ip ospf neighbor
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+10.0.0.2          1   FULL/  -        00:00:38    10.0.0.2        Gi0/0</code></pre>
+
+    <h2>Reflection</h2>
+    <p>Replace with a short note on what went wrong, what you'd do differently, or what concept clicked for you during this lab.</p>
+
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Built and maintained by Your Name — <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
